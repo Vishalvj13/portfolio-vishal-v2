@@ -1,0 +1,77 @@
+.writing-section {
+  margin-top: var(--section-gap);
+  padding: 42px 34px;
+}
+
+.writing-intro {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.writing-intro p {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+.writing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.writing-card {
+  display: block;
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  transition: transform 0.24s ease, border-color 0.24s ease;
+}
+
+.writing-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124, 147, 255, 0.24);
+}
+
+.writing-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--primary-2);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+}
+
+.writing-card-icon {
+  margin: 18px 0 14px;
+  color: var(--heading);
+}
+
+.writing-card h3 {
+  margin: 0 0 12px;
+  color: var(--heading);
+  line-height: 1.4;
+  font-size: 1.08rem;
+}
+
+.writing-card p {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.75;
+}
+
+@media (max-width: 920px) {
+  .writing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .writing-section {
+    padding: 30px 20px;
+  }
+}

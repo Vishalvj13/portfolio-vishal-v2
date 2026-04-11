@@ -1,0 +1,1 @@
+This portfolio serves as a dynamic digital resume, built to highlight my professional journey and achievements with smooth animations and clean design. The site features sections like About, Skills, Projects, Experience, Education, and Contact all crafted with interactive elements..

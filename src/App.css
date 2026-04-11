@@ -1,0 +1,52 @@
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.app-container {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 80px;
+}
+
+.app-gradient {
+  position: fixed;
+  border-radius: 999px;
+  filter: blur(90px);
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.app-gradient-one {
+  width: 280px;
+  height: 280px;
+  top: 80px;
+  left: -70px;
+  background: rgba(124, 147, 255, 0.4);
+}
+
+.app-gradient-two {
+  width: 260px;
+  height: 260px;
+  top: 260px;
+  right: -30px;
+  background: rgba(61, 217, 235, 0.26);
+}
+
+.app-gradient-three {
+  width: 220px;
+  height: 220px;
+  bottom: 120px;
+  left: 12%;
+  background: rgba(124, 147, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    width: min(100% - 20px, 1180px);
+    padding-top: 18px;
+  }
+}
