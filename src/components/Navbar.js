@@ -42,17 +42,17 @@ const Navbar = ({ onOpenResume, onOpenCommandPalette }) => {
     const sections = document.querySelectorAll('section[id]');
 
     const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveSection(entry.target.id);
-            }
-          });
-        },
-        {
-          threshold: 0.35,
-          rootMargin: '-20% 0px -40% 0px',
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.35,
+        rootMargin: '-20% 0px -40% 0px',
+      }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -69,109 +69,105 @@ const Navbar = ({ onOpenResume, onOpenCommandPalette }) => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-      <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
-        <div className="navbar-container">
-          <Link
-              to="home"
-              smooth
-              duration={500}
-              className="brand-mark"
-              onClick={closeMenu}
-          >
-            <span className="brand-badge">VJ</span>
+    <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+      <div className="navbar-container">
+        <Link
+          to="home"
+          smooth
+          duration={500}
+          className="brand-mark brand-mark--compact"
+          onClick={closeMenu}
+          aria-label="Go to home"
+        >
+          <span className="brand-badge">VJ</span>
+        </Link>
 
-            <div className="brand-text">
-              <strong>Vishal Junghare</strong>
-              <small>Software Engineer</small>
-            </div>
-          </Link>
-
-          <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-            {links.map((link) => (
-                <li key={link.to}>
-                  <Link
-                      to={link.to}
-                      smooth
-                      duration={500}
-                      offset={-70}
-                      className={activeSection === link.to ? 'active' : ''}
-                      onClick={closeMenu}
-                  >
-                    <span className="icon">{link.icon}</span>
-                    <span>{link.label}</span>
-                  </Link>
-                </li>
-            ))}
-
-            <li className="nav-mobile-utilities">
-              <button
-                  type="button"
-                  className="nav-mobile-btn"
-                  onClick={() => {
-                    toggleTheme();
-                    closeMenu();
-                  }}
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          {links.map((link) => (
+            <li key={link.to}>
+              <Link
+                to={link.to}
+                smooth
+                duration={500}
+                offset={-70}
+                className={activeSection === link.to ? 'active' : ''}
+                onClick={closeMenu}
               >
-                {isDark ? <Sun size={16} /> : <Moon size={16} />}
-                <span>Theme</span>
-              </button>
-
-              <button
-                  type="button"
-                  className="nav-mobile-btn"
-                  onClick={() => {
-                    onOpenResume?.();
-                    closeMenu();
-                  }}
-              >
-                <FileText size={16} />
-                <span>Resume</span>
-              </button>
-
-              <button
-                  type="button"
-                  className="nav-mobile-btn"
-                  onClick={() => {
-                    onOpenCommandPalette?.();
-                    closeMenu();
-                  }}
-              >
-                <Command size={16} />
-                <span>Quick actions</span>
-              </button>
+                <span className="icon">{link.icon}</span>
+                <span>{link.label}</span>
+              </Link>
             </li>
-          </ul>
+          ))}
 
-          <div className="nav-actions-desktop">
+          <li className="nav-mobile-utilities">
             <button
-                type="button"
-                className="nav-icon-btn"
-                onClick={() => onOpenCommandPalette?.()}
-                aria-label="Open command palette"
+              type="button"
+              className="nav-mobile-btn"
+              onClick={() => {
+                toggleTheme();
+                closeMenu();
+              }}
             >
-              <Command size={18} />
+              {isDark ? <Sun size={16} /> : <Moon size={16} />}
+              <span>Theme</span>
             </button>
 
             <button
-                type="button"
-                className="nav-icon-btn"
-                onClick={toggleTheme}
-                aria-label="Toggle theme"
+              type="button"
+              className="nav-mobile-btn"
+              onClick={() => {
+                onOpenResume?.();
+                closeMenu();
+              }}
             >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
+              <FileText size={16} />
+              <span>Resume</span>
             </button>
-          </div>
+
+            <button
+              type="button"
+              className="nav-mobile-btn"
+              onClick={() => {
+                onOpenCommandPalette?.();
+                closeMenu();
+              }}
+            >
+              <Command size={16} />
+              <span>Quick actions</span>
+            </button>
+          </li>
+        </ul>
+
+        <div className="nav-actions-desktop">
+          <button
+            type="button"
+            className="nav-icon-btn"
+            onClick={() => onOpenCommandPalette?.()}
+            aria-label="Open command palette"
+          >
+            <Command size={18} />
+          </button>
 
           <button
-              type="button"
-              className="hamburger"
-              onClick={() => setMenuOpen((prev) => !prev)}
-              aria-label="Toggle menu"
+            type="button"
+            className="nav-icon-btn"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
           >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
         </div>
-      </nav>
+
+        <button
+          type="button"
+          className="hamburger"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </div>
+    </nav>
   );
 };
 
