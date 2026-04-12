@@ -221,6 +221,7 @@
 .hero-visual {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .profile-frame {
@@ -231,6 +232,7 @@
   background: radial-gradient(circle at top, rgba(124, 147, 255, 0.18), rgba(255, 255, 255, 0.03) 60%);
   border: 1px solid rgba(148, 163, 184, 0.12);
   box-shadow: var(--shadow-soft);
+  transform: translateY(-26px);
 }
 
 .profile-img {
@@ -468,6 +470,7 @@
 
   .profile-frame {
     max-width: 360px;
+    transform: translateY(0);
   }
 }
 
@@ -502,6 +505,7 @@
 
   .profile-frame {
     padding: 16px;
+    transform: translateY(0);
   }
 }
 
