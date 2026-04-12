@@ -162,7 +162,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(148, 163, 184, 0.12);
   color: #dce7f6;
-  transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease;
+  transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, filter 0.24s ease;
 }
 
 .social-icon:hover,
@@ -394,20 +394,63 @@
   animation: floatBlob 14s ease-in-out infinite;
 }
 
-.blob-background li:nth-child(1) { width: 120px; height: 120px; top: 16%; left: -10px; }
-.blob-background li:nth-child(2) { width: 200px; height: 200px; top: 28%; right: -40px; animation-delay: 1s; }
-.blob-background li:nth-child(3) { width: 150px; height: 150px; bottom: 18%; left: 12%; animation-delay: 2.2s; }
-.blob-background li:nth-child(4) { width: 110px; height: 110px; top: 10%; right: 22%; animation-delay: 1.4s; }
-.blob-background li:nth-child(5) { width: 220px; height: 220px; bottom: -50px; right: 18%; animation-delay: 2.8s; }
+.blob-background li:nth-child(1) {
+  width: 120px;
+  height: 120px;
+  top: 16%;
+  left: -10px;
+}
+
+.blob-background li:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  top: 28%;
+  right: -40px;
+  animation-delay: 1s;
+}
+
+.blob-background li:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  bottom: 18%;
+  left: 12%;
+  animation-delay: 2.2s;
+}
+
+.blob-background li:nth-child(4) {
+  width: 110px;
+  height: 110px;
+  top: 10%;
+  right: 22%;
+  animation-delay: 1.4s;
+}
+
+.blob-background li:nth-child(5) {
+  width: 220px;
+  height: 220px;
+  bottom: -50px;
+  right: 18%;
+  animation-delay: 2.8s;
+}
 
 @keyframes floatBlob {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(0, -18px, 0) scale(1.06); }
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.06);
+  }
 }
 
 @keyframes pulseFloat {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-8px) scale(1.03); }
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.03);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -517,4 +560,95 @@
 [data-theme='light'] .palette-btn {
   background: rgba(83, 109, 254, 0.05);
   color: var(--heading);
+}
+
+/* Better visibility in light theme */
+[data-theme='light'] .gradient-text {
+  background: linear-gradient(120deg, #1c2f6f 0%, #536dfe 48%, #0aa7cf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme='light'] .typewriter-line {
+  color: #304fd9;
+}
+
+[data-theme='light'] .hero-stat-icon {
+  background: rgba(83, 109, 254, 0.12);
+  color: #2f49d1;
+  border: 1px solid rgba(83, 109, 254, 0.14);
+}
+
+[data-theme='light'] .hero-stat-card {
+  background: rgba(83, 109, 254, 0.04);
+}
+
+[data-theme='light'] .hero-role {
+  color: #1d2c48;
+}
+
+/* Colorful social icons */
+.social-icon.github-social {
+  color: #181717;
+  background: rgba(24, 23, 23, 0.08);
+  border-color: rgba(24, 23, 23, 0.12);
+}
+
+.social-icon.linkedin-social {
+  color: #0a66c2;
+  background: rgba(10, 102, 194, 0.1);
+  border-color: rgba(10, 102, 194, 0.18);
+}
+
+.social-icon.instagram-social {
+  color: #e4405f;
+  background: rgba(228, 64, 95, 0.1);
+  border-color: rgba(228, 64, 95, 0.18);
+}
+
+.social-icon.credly-social {
+  color: #ff6b00;
+  background: rgba(255, 107, 0, 0.1);
+  border-color: rgba(255, 107, 0, 0.18);
+}
+
+.social-icon.medium-social {
+  color: #00ab6c;
+  background: rgba(0, 171, 108, 0.1);
+  border-color: rgba(0, 171, 108, 0.18);
+}
+
+.social-icon.github-social:hover,
+.social-icon.linkedin-social:hover,
+.social-icon.instagram-social:hover,
+.social-icon.credly-social:hover,
+.social-icon.medium-social:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.02);
+}
+
+[data-theme='light'] .social-icon.github-social {
+  color: #181717;
+  background: rgba(24, 23, 23, 0.06);
+}
+
+[data-theme='light'] .social-icon.linkedin-social {
+  color: #0a66c2;
+  background: rgba(10, 102, 194, 0.08);
+}
+
+[data-theme='light'] .social-icon.instagram-social {
+  color: #e4405f;
+  background: rgba(228, 64, 95, 0.08);
+}
+
+[data-theme='light'] .social-icon.credly-social {
+  color: #ff6b00;
+  background: rgba(255, 107, 0, 0.08);
+}
+
+[data-theme='light'] .social-icon.medium-social {
+  color: #00ab6c;
+  background: rgba(0, 171, 108, 0.08);
 }
