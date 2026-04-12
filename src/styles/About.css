@@ -18,6 +18,10 @@
   letter-spacing: -0.04em;
 }
 
+.iconA {
+  color: #dce5ff;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
@@ -41,6 +45,10 @@
   color: var(--text-soft);
   font-size: 1rem;
   line-height: 1.9;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
 }
 
 .about-highlight-column {
@@ -111,9 +119,17 @@
   border-radius: 999px;
 }
 
-.terminal-dot.red { background: #fb7185; }
-.terminal-dot.yellow { background: #fbbf24; }
-.terminal-dot.green { background: #22c55e; }
+.terminal-dot.red {
+  background: #fb7185;
+}
+
+.terminal-dot.yellow {
+  background: #fbbf24;
+}
+
+.terminal-dot.green {
+  background: #22c55e;
+}
 
 .terminal-box {
   min-height: 240px;
@@ -147,7 +163,30 @@
 }
 
 @keyframes blinkCursor {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Light theme visibility fixes */
+[data-theme='light'] .iconA {
+  color: #1d2c48;
+}
+
+[data-theme='light'] .about-focus-icon {
+  background: rgba(83, 109, 254, 0.12);
+  color: #2f49d1;
+  border: 1px solid rgba(83, 109, 254, 0.14);
+}
+
+[data-theme='light'] .about-focus-card {
+  background: rgba(83, 109, 254, 0.04);
+}
+
+[data-theme='light'] .about-story,
+[data-theme='light'] .about-highlights,
+[data-theme='light'] .terminal-panel {
+  background: rgba(83, 109, 254, 0.03);
 }
 
 @media (max-width: 960px) {
