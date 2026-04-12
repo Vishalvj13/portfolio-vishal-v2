@@ -28,7 +28,7 @@ const educationData = [
     institution: 'Janata College, Chandrapur (MSBHSE)',
     year: '2014 – 2015',
     grade: '76.31%',
-    icon: <FaSchool style={{ color: '#112D4E', fontSize: '2.2rem' }} />,
+    icon: <FaSchool style={{ color: '#4A90E2', fontSize: '2.2rem' }} />,
   },
   {
     degree: 'SSC',
@@ -36,7 +36,7 @@ const educationData = [
     institution: 'Lokmanya Tilak Vidyalaya, Chandrapur (MSBHSE)',
     year: '2013 – 2014',
     grade: '84.6%',
-    icon: <PiStudent style={{ color: '#3F3D56', fontSize: '2.2rem' }} />,
+    icon: <PiStudent style={{ color: '#6B7CFF', fontSize: '2.2rem' }} />,
   },
 ];
 
@@ -47,7 +47,7 @@ const Education = () => {
         <p className="section-kicker">Education</p>
         <h2 className="education-title">
           <GraduationCap size={28} className="iconEd" />
-          Academic foundation
+          Academic Foundation
         </h2>
         <div className="title-underline"></div>
       </div>

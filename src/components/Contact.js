@@ -71,7 +71,7 @@ const Contact = ({ onOpenResume }) => {
         <p className="section-kicker">Contact</p>
         <h2 className="contact-title">
           <Mail size={28} className="iconC" />
-          Let’s build something meaningful
+          Let’s Build Something Meaningful
         </h2>
         <div className="title-underline"></div>
       </div>

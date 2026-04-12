@@ -31,7 +31,7 @@ const WritingSection = () => {
         <p className="section-kicker">Writing</p>
         <h2 className="writing-title">
           <BookOpenText size={28} className="iconWriting" />
-          Notes, articles, and interview breakdowns
+          Notes, Articles, and Interview Breakdowns
         </h2>
         <div className="title-underline"></div>
       </div>

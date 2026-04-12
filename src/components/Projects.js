@@ -98,7 +98,7 @@ const Projects = () => {
         <p className="section-kicker">Projects</p>
         <h2 className="projects-title">
           <FolderKanban size={28} className="iconP" />
-          Work that proves how I build
+          Work that Proves How I Build
         </h2>
         <div className="title-underline"></div>
       </div>

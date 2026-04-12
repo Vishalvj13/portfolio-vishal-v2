@@ -124,6 +124,33 @@
   gap: 10px;
 }
 
+/* GitHub link pill/button - made same style family as experience chips */
+.project-links a,
+.project-links button,
+.project-links .project-link,
+.project-links .project-github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 46px;
+  padding: 0 14px;
+  border-radius: 14px;
+  background: rgba(124, 147, 255, 0.1);
+  color: var(--heading);
+  border: 1px solid rgba(124, 147, 255, 0.18);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.project-links a:hover,
+.project-links button:hover,
+.project-links .project-link:hover,
+.project-links .project-github-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(124, 147, 255, 0.26);
+  background: rgba(124, 147, 255, 0.14);
+}
+
 .project-category {
   display: inline-flex;
   margin-top: 14px;
@@ -164,6 +191,38 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* Project skill pills - same style family as experience chips */
+.project-tech-row span,
+.project-tech-row .tech-tag,
+.project-tech-row .project-tech-chip,
+.project-tech-row .project-chip,
+.project-tech-row .project-tag,
+.project-tech-row .tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1;
+  border: 1px solid rgba(124, 147, 255, 0.18);
+  background: rgba(124, 147, 255, 0.1);
+  color: var(--heading);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.project-tech-row span:hover,
+.project-tech-row .tech-tag:hover,
+.project-tech-row .project-tech-chip:hover,
+.project-tech-row .project-chip:hover,
+.project-tech-row .project-tag:hover,
+.project-tech-row .tag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(124, 147, 255, 0.26);
+  background: rgba(124, 147, 255, 0.14);
 }
 
 .project-case-btn {
@@ -277,6 +336,84 @@
   color: var(--heading);
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+/* Light theme */
+[data-theme='light'] .project-links a,
+[data-theme='light'] .project-links button,
+[data-theme='light'] .project-links .project-link,
+[data-theme='light'] .project-links .project-github-link {
+  background: rgba(82, 102, 230, 0.1);
+  border-color: rgba(82, 102, 230, 0.18);
+  color: #38517d;
+}
+
+[data-theme='light'] .project-links a:hover,
+[data-theme='light'] .project-links button:hover,
+[data-theme='light'] .project-links .project-link:hover,
+[data-theme='light'] .project-links .project-github-link:hover {
+  background: rgba(82, 102, 230, 0.14);
+  border-color: rgba(82, 102, 230, 0.24);
+}
+
+[data-theme='light'] .project-tech-row span,
+[data-theme='light'] .project-tech-row .tech-tag,
+[data-theme='light'] .project-tech-row .project-tech-chip,
+[data-theme='light'] .project-tech-row .project-chip,
+[data-theme='light'] .project-tech-row .project-tag,
+[data-theme='light'] .project-tech-row .tag {
+  background: rgba(82, 102, 230, 0.1);
+  border-color: rgba(82, 102, 230, 0.18);
+  color: #38517d;
+}
+
+[data-theme='light'] .project-tech-row span:hover,
+[data-theme='light'] .project-tech-row .tech-tag:hover,
+[data-theme='light'] .project-tech-row .project-tech-chip:hover,
+[data-theme='light'] .project-tech-row .project-chip:hover,
+[data-theme='light'] .project-tech-row .project-tag:hover,
+[data-theme='light'] .project-tech-row .tag:hover {
+  background: rgba(82, 102, 230, 0.14);
+  border-color: rgba(82, 102, 230, 0.24);
+}
+
+/* Dark theme */
+[data-theme='dark'] .project-links a,
+[data-theme='dark'] .project-links button,
+[data-theme='dark'] .project-links .project-link,
+[data-theme='dark'] .project-links .project-github-link {
+  background: rgba(124, 147, 255, 0.12);
+  border-color: rgba(124, 147, 255, 0.2);
+  color: #dbe6f7;
+}
+
+[data-theme='dark'] .project-links a:hover,
+[data-theme='dark'] .project-links button:hover,
+[data-theme='dark'] .project-links .project-link:hover,
+[data-theme='dark'] .project-links .project-github-link:hover {
+  background: rgba(124, 147, 255, 0.16);
+  border-color: rgba(124, 147, 255, 0.26);
+}
+
+[data-theme='dark'] .project-tech-row span,
+[data-theme='dark'] .project-tech-row .tech-tag,
+[data-theme='dark'] .project-tech-row .project-tech-chip,
+[data-theme='dark'] .project-tech-row .project-chip,
+[data-theme='dark'] .project-tech-row .project-tag,
+[data-theme='dark'] .project-tech-row .tag {
+  background: rgba(124, 147, 255, 0.12);
+  border-color: rgba(124, 147, 255, 0.2);
+  color: #dbe6f7;
+}
+
+[data-theme='dark'] .project-tech-row span:hover,
+[data-theme='dark'] .project-tech-row .tech-tag:hover,
+[data-theme='dark'] .project-tech-row .project-tech-chip:hover,
+[data-theme='dark'] .project-tech-row .project-chip:hover,
+[data-theme='dark'] .project-tech-row .project-tag:hover,
+[data-theme='dark'] .project-tech-row .tag:hover {
+  background: rgba(124, 147, 255, 0.16);
+  border-color: rgba(124, 147, 255, 0.26);
 }
 
 @media (max-width: 960px) {

@@ -86,7 +86,7 @@ const Experience = () => {
         <p className="section-kicker">Experience</p>
         <h2 className="timeline-title">
           <Briefcase size={28} className="iconE" />
-          Where I’ve created impact
+          Where I’ve Created Impact
         </h2>
         <div className="title-underline"></div>
       </div>

@@ -73,7 +73,7 @@
   align-items: flex-start;
   gap: 16px;
   padding: 22px;
-  transition: transform 0.24s ease, border-color 0.24s ease;
+  transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease;
 }
 
 .contact-card:hover {
@@ -148,6 +148,84 @@
   border: 1px solid var(--surface-border);
   color: var(--heading);
   box-shadow: var(--shadow-soft);
+}
+
+/* Stronger contact icons */
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease;
+}
+
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Default dark theme colors */
+.contact-icon .lucide-mail {
+  color: #7dd3fc;
+}
+
+.contact-icon .lucide-linkedin {
+  color: #60a5fa;
+}
+
+.contact-icon .lucide-github {
+  color: #f5f7ff;
+}
+
+.contact-card:hover .contact-icon {
+  transform: translateY(-2px);
+}
+
+/* Dark theme containers */
+[data-theme='dark'] .contact-icon {
+  background: rgba(124, 147, 255, 0.12);
+  border-color: rgba(124, 147, 255, 0.18);
+}
+
+[data-theme='dark'] .contact-card:hover .contact-icon {
+  background: rgba(124, 147, 255, 0.16);
+  border-color: rgba(124, 147, 255, 0.26);
+}
+
+/* Light theme containers */
+[data-theme='light'] .contact-icon {
+  background: rgba(82, 102, 230, 0.08);
+  border-color: rgba(82, 102, 230, 0.14);
+}
+
+/* Light theme icon colors */
+[data-theme='light'] .contact-icon .lucide-mail {
+  color: #2563eb;
+}
+
+[data-theme='light'] .contact-icon .lucide-linkedin {
+  color: #0a66c2;
+}
+
+[data-theme='light'] .contact-icon .lucide-github {
+  color: #181717;
+}
+
+[data-theme='light'] .contact-card:hover .contact-icon {
+  background: rgba(82, 102, 230, 0.12);
+  border-color: rgba(82, 102, 230, 0.22);
+}
+
+/* Optional: keep cards slightly clearer in light mode */
+[data-theme='light'] .contact-copy,
+[data-theme='light'] .contact-card,
+[data-theme='light'] .contact-form-card {
+  background: rgba(82, 102, 230, 0.03);
+  border-color: rgba(82, 102, 230, 0.1);
 }
 
 @media (max-width: 860px) {
