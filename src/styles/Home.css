@@ -222,7 +222,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 16px;
+  padding-top: 24px;
 }
 
 .profile-frame {
@@ -535,7 +535,7 @@
 }
 
 .utility-row {
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
 .palette-btn {
