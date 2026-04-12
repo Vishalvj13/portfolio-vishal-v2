@@ -232,7 +232,7 @@ const Home = ({ onOpenResume, onOpenCommandPalette }) => {
             <img src={profileImg1} alt="Vishal Junghare" className="profile-img" />
             <div className="profile-glass-card bottom-card">
               <span>Open to</span>
-              <strong>Impactful engineering roles</strong>
+              <strong>Impactful Engineering Roles</strong>
             </div>
           </div>
         </motion.div>
