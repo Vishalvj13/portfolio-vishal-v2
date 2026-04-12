@@ -12,7 +12,7 @@ const experienceData = [
     logo: globalLogicLogo,
     date: 'Jun 2025 – Present',
     client: 'Leading iPaaS Provider',
-    badge: 'Cloud security & governance',
+    badge: 'Cloud Security & Governance',
     summary: 'Working on cloud security, governance, and automation workflows across enterprise AWS environments.',
     achievements: [
       'Built automated remediation modules and a validation engine that reduced unnecessary API calls by 95%.',
@@ -24,7 +24,7 @@ const experienceData = [
       'Handled automation-oriented flows where reducing duplicate checks and noisy API usage had direct operational value.',
       'Contributed to production-quality engineering improvements instead of only isolated feature development.',
     ],
-    tech: ['Java', 'Spring Boot', 'AWS', 'Automation', 'Security'],
+    tech: ['AWS', 'CI/CD','Automation', 'Security'],
     icon: <ShieldCheck size={18} />,
   },
   {
@@ -33,7 +33,7 @@ const experienceData = [
     logo: amdocsLogo,
     date: 'Jan 2024 – Apr 2025',
     client: 'Telecom clients in UK and South Africa',
-    badge: 'Backend services & security hardening',
+    badge: 'Backend Services & Security Hardening',
     summary: 'Contributed to backend engineering, security improvement, and large-scale enterprise integration work.',
     achievements: [
       'Resolved 100+ security vulnerabilities, including XSS and credential exposure related issues.',
@@ -45,7 +45,7 @@ const experienceData = [
       'Handled bug fixing, API-related changes, and production-sensitive improvements rather than only greenfield work.',
       'Gained strong exposure to debugging issues across service, UI impact, and environment layers.',
     ],
-    tech: ['Java', 'Spring', 'REST APIs', 'Security', 'Enterprise Integration'],
+    tech: ['Java', 'Spring', 'Hibernate/JPA','REST APIs', 'MySQL', 'Jenkins', 'Security', 'Enterprise Integration'],
     icon: <Layers3 size={18} />,
   },
   {
@@ -54,7 +54,7 @@ const experienceData = [
     logo: amdocsLogo,
     date: 'May 2022 – Dec 2023',
     client: 'Major telecom client in UK',
-    badge: 'Foundation in delivery & debugging',
+    badge: 'Foundation in Delivery & Debugging',
     summary: 'Built a strong foundation in enterprise systems, service integration, testing, and agile product delivery.',
     achievements: [
       'Worked on CRM-oriented development and contributed to scalable telecom service workflows.',
