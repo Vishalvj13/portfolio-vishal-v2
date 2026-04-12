@@ -162,15 +162,13 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(148, 163, 184, 0.12);
   color: #dce7f6;
-  transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, filter 0.24s ease;
+  transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, filter 0.24s ease, color 0.24s ease;
 }
 
 .social-icon:hover,
 .contact-icon:hover,
 .project-link:hover {
   transform: translateY(-3px);
-  background: rgba(124, 147, 255, 0.12);
-  border-color: rgba(124, 147, 255, 0.22);
 }
 
 .social-icon svg,
@@ -491,7 +489,8 @@
 
   .primary-btn,
   .secondary-btn,
-  .contact-primary-btn {
+  .contact-primary-btn,
+  .ghost-btn {
     width: 100%;
   }
 
@@ -554,7 +553,6 @@
 }
 
 [data-theme='light'] .hero-pill-row span,
-[data-theme='light'] .social-icon,
 [data-theme='light'] .hero-stat-card,
 [data-theme='light'] .cert-card,
 [data-theme='light'] .palette-btn {
@@ -588,35 +586,35 @@
   color: #1d2c48;
 }
 
-/* Colorful social icons */
+/* Social icons - default / dark-friendly */
 .social-icon.github-social {
-  color: #181717;
-  background: rgba(24, 23, 23, 0.08);
-  border-color: rgba(24, 23, 23, 0.12);
+  color: #f5f7ff;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .social-icon.linkedin-social {
-  color: #0a66c2;
-  background: rgba(10, 102, 194, 0.1);
-  border-color: rgba(10, 102, 194, 0.18);
+  color: #7fc3ff;
+  background: rgba(10, 102, 194, 0.16);
+  border-color: rgba(10, 102, 194, 0.28);
 }
 
 .social-icon.instagram-social {
-  color: #e4405f;
-  background: rgba(228, 64, 95, 0.1);
-  border-color: rgba(228, 64, 95, 0.18);
+  color: #ff7a9a;
+  background: rgba(228, 64, 95, 0.16);
+  border-color: rgba(228, 64, 95, 0.28);
 }
 
 .social-icon.credly-social {
-  color: #ff6b00;
-  background: rgba(255, 107, 0, 0.1);
-  border-color: rgba(255, 107, 0, 0.18);
+  color: #ff9a4d;
+  background: rgba(255, 107, 0, 0.16);
+  border-color: rgba(255, 107, 0, 0.28);
 }
 
 .social-icon.medium-social {
-  color: #00ab6c;
-  background: rgba(0, 171, 108, 0.1);
-  border-color: rgba(0, 171, 108, 0.18);
+  color: #f5f7ff;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .social-icon.github-social:hover,
@@ -625,30 +623,36 @@
 .social-icon.credly-social:hover,
 .social-icon.medium-social:hover {
   transform: translateY(-3px);
-  filter: brightness(1.02);
+  filter: brightness(1.04);
 }
 
+/* Light theme social icons */
 [data-theme='light'] .social-icon.github-social {
   color: #181717;
   background: rgba(24, 23, 23, 0.06);
+  border-color: rgba(24, 23, 23, 0.12);
 }
 
 [data-theme='light'] .social-icon.linkedin-social {
   color: #0a66c2;
   background: rgba(10, 102, 194, 0.08);
+  border-color: rgba(10, 102, 194, 0.16);
 }
 
 [data-theme='light'] .social-icon.instagram-social {
   color: #e4405f;
   background: rgba(228, 64, 95, 0.08);
+  border-color: rgba(228, 64, 95, 0.16);
 }
 
 [data-theme='light'] .social-icon.credly-social {
   color: #ff6b00;
   background: rgba(255, 107, 0, 0.08);
+  border-color: rgba(255, 107, 0, 0.16);
 }
 
 [data-theme='light'] .social-icon.medium-social {
-  color: #00ab6c;
-  background: rgba(0, 171, 108, 0.08);
+  color: #121212;
+  background: rgba(18, 18, 18, 0.06);
+  border-color: rgba(18, 18, 18, 0.12);
 }
