@@ -1,83 +1,303 @@
 import React, { useMemo, useState } from 'react';
 import '../styles/Skills.css';
-import { motion } from 'framer-motion';
-import { Brain, Cloud, Database, LayoutGrid, Wrench, ShieldCheck } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Brain,
+  Blocks,
+  Code2,
+  Cloud,
+  Database,
+  Wrench,
+  ShieldCheck,
+  Coffee,
+  Leaf,
+  Network,
+  Webhook,
+  FileJson,
+  Palette,
+  MonitorSmartphone,
+  Layers3,
+  CloudCog,
+  Container,
+  ServerCog,
+  KeyRound,
+  GitBranch,
+  GitPullRequest,
+  Bug,
+  TestTube2,
+  LockKeyhole,
+  Gauge,
+  Users,
+} from 'lucide-react';
 
-const skillGroups = {
-  backend: {
-    title: 'Backend',
+const skillCategories = [
+  {
+    key: 'backend',
+    label: 'Backend',
     icon: <Brain size={18} />,
-    intro: 'My strongest hands-on foundation is in backend engineering, APIs, service design, and enterprise-style delivery.',
-    items: [
-      { name: 'Java', detail: 'Core backend language used across enterprise services and problem solving.' },
-      { name: 'Spring Boot', detail: 'REST APIs, service layers, validation flows, configuration, and backend application delivery.' },
-      { name: 'Hibernate / JPA', detail: 'Persistence mapping, repository-driven development, and relational data handling.' },
-      { name: 'Microservices', detail: 'Service decomposition, integration, API gateway concepts, and scalable backend thinking.' },
-      { name: 'REST APIs', detail: 'Request/response design, status handling, integration, and API debugging.' },
+    title: 'Backend',
+    description:
+      'My strongest hands-on foundation is in backend engineering, APIs, service design, and enterprise-style delivery.',
+    skills: [
+      {
+        title: 'Java',
+        icon: <Coffee size={18} />,
+        description:
+          'Core backend language used across enterprise services, business logic, and problem solving.',
+      },
+      {
+        title: 'Spring Boot',
+        icon: <Leaf size={18} />,
+        description:
+          'REST APIs, service layers, validation flows, configuration, and backend application delivery.',
+      },
+      {
+        title: 'Hibernate / JPA',
+        icon: <Database size={18} />,
+        description:
+          'Persistence mapping, repository-driven development, and relational data handling.',
+      },
+      {
+        title: 'Microservices',
+        icon: <Network size={18} />,
+        description:
+          'Service decomposition, integration, API gateway concepts, and scalable backend thinking.',
+      },
+      {
+        title: 'REST APIs',
+        icon: <Webhook size={18} />,
+        description:
+          'Request/response design, status handling, integration patterns, and API debugging.',
+      },
+      {
+        title: 'JSON & Payload Design',
+        icon: <FileJson size={18} />,
+        description:
+          'Working with structured request models, contract consistency, and backend-to-frontend data flow.',
+      },
     ],
   },
-  frontend: {
+  {
+    key: 'frontend',
+    label: 'Frontend',
+    icon: <Blocks size={18} />,
     title: 'Frontend',
-    icon: <LayoutGrid size={18} />,
-    intro: 'I use frontend development to build polished interfaces that connect clearly with backend functionality and product needs.',
-    items: [
-      { name: 'React', detail: 'Components, hooks, controlled forms, API integration, state handling, and interactive UI flows.' },
-      { name: 'JavaScript', detail: 'State updates, async logic, event handling, array transformations, and browser behavior.' },
-      { name: 'HTML / CSS', detail: 'Semantic layout, responsive design, spacing systems, and recruiter-friendly presentation.' },
-      { name: 'Framer Motion', detail: 'Subtle motion for section reveals, cards, and premium interactive feel.' },
-      { name: 'UI State Handling', detail: 'Loading, error, empty states, filters, and user feedback patterns.' },
+    description:
+      'I contribute where product polish matters — building clear interfaces, responsive layouts, and user-friendly engineering experiences.',
+    skills: [
+      {
+        title: 'React',
+        icon: <Code2 size={18} />,
+        description:
+          'Component-driven UI building, reusable sections, interactive layouts, and portfolio/product interfaces.',
+      },
+      {
+        title: 'JavaScript',
+        icon: <Code2 size={18} />,
+        description:
+          'Dynamic UI behavior, event handling, state updates, and frontend integration logic.',
+      },
+      {
+        title: 'HTML / CSS',
+        icon: <Palette size={18} />,
+        description:
+          'Responsive layouts, visual polish, spacing systems, typography, and theme-aware styling.',
+      },
+      {
+        title: 'Theme Systems',
+        icon: <MonitorSmartphone size={18} />,
+        description:
+          'Building light/dark experiences, component consistency, and cleaner visual interaction states.',
+      },
+      {
+        title: 'State-driven UI',
+        icon: <Layers3 size={18} />,
+        description:
+          'Using component state and conditional rendering to keep interfaces interactive and intuitive.',
+      },
+      {
+        title: 'UX-minded Delivery',
+        icon: <Users size={18} />,
+        description:
+          'Thinking beyond implementation to ensure features are understandable, useful, and polished for users.',
+      },
     ],
   },
-  cloud: {
-    title: 'Cloud & DevOps',
+  {
+    key: 'cloud',
+    label: 'Cloud & DevOps',
     icon: <Cloud size={18} />,
-    intro: 'Cloud engineering is a strong differentiator in my profile, especially where deployment, security, and automation meet.',
-    items: [
-      { name: 'AWS', detail: 'Strong familiarity across EC2, S3, CloudFront, RDS, IAM, and architecture patterns.' },
-      { name: 'CI/CD', detail: 'Practical exposure to release flows, Jenkins, and deployment-aware engineering.' },
-      { name: 'Docker', detail: 'Container-oriented understanding for local consistency and deployment workflows.' },
-      { name: 'Cloud Security', detail: 'Governance, policy alignment, and automation-oriented secure-by-default thinking.' },
-      { name: 'Deployment Architecture', detail: 'Connecting frontend, backend, and managed services in a production-like setup.' },
+    title: 'Cloud & DevOps',
+    description:
+      'AWS is a major part of my profile, especially around security, automation, infrastructure awareness, and production-grade workflows.',
+    skills: [
+      {
+        title: 'AWS Core Services',
+        icon: <CloudCog size={18} />,
+        description:
+          'Hands-on understanding of services like EC2, S3, IAM, CloudWatch, and related cloud building blocks.',
+      },
+      {
+        title: 'Cloud Security',
+        icon: <ShieldCheck size={18} />,
+        description:
+          'Governance, policy-driven workflows, remediation thinking, and secure-by-default engineering practices.',
+      },
+      {
+        title: 'CI/CD Awareness',
+        icon: <GitPullRequest size={18} />,
+        description:
+          'Exposure to release workflows, deployment thinking, automation, and safer delivery pipelines.',
+      },
+      {
+        title: 'Docker',
+        icon: <Container size={18} />,
+        description:
+          'Understanding containerized application flow, packaging concepts, and deployment portability.',
+      },
+      {
+        title: 'Automation Workflows',
+        icon: <ServerCog size={18} />,
+        description:
+          'Building or improving repetitive engineering tasks through validations, remediation flows, and process automation.',
+      },
+      {
+        title: 'IAM / Access Control',
+        icon: <KeyRound size={18} />,
+        description:
+          'Security-aware thinking around permissions, roles, controlled access, and enterprise cloud environments.',
+      },
     ],
   },
-  data: {
-    title: 'Databases',
+  {
+    key: 'databases',
+    label: 'Databases',
     icon: <Database size={18} />,
-    intro: 'I am comfortable working with relational data models and practical query-aware backend design.',
-    items: [
-      { name: 'MySQL', detail: 'Relational schema work, joins, CRUD-backed services, and query-driven application behavior.' },
-      { name: 'MongoDB', detail: 'Basic exposure to document-oriented data modeling and flexible storage use cases.' },
-      { name: 'Data Mapping', detail: 'Connecting backend entities cleanly to service and UI needs.' },
+    title: 'Databases',
+    description:
+      'I work comfortably with relational data models, backend persistence layers, and database-backed enterprise systems.',
+    skills: [
+      {
+        title: 'MySQL',
+        icon: <Database size={18} />,
+        description:
+          'Schema-based backend persistence, query handling, and structured application data storage.',
+      },
+      {
+        title: 'SQL',
+        icon: <Database size={18} />,
+        description:
+          'Writing queries, joins, filters, aggregations, and debugging database-related application issues.',
+      },
+      {
+        title: 'Entity Mapping',
+        icon: <Layers3 size={18} />,
+        description:
+          'Connecting application models with persistent storage through JPA and relational mapping.',
+      },
+      {
+        title: 'Repository Patterns',
+        icon: <Database size={18} />,
+        description:
+          'Using repository abstractions for cleaner data access and backend service integration.',
+      },
     ],
   },
-  tools: {
-    title: 'Tools & Collaboration',
+  {
+    key: 'tools',
+    label: 'Tools & Collaboration',
     icon: <Wrench size={18} />,
-    intro: 'Good delivery is not just coding, it is also debugging, communication, and reliable collaboration tooling.',
-    items: [
-      { name: 'Git / GitHub / Bitbucket', detail: 'Version control, branching, collaboration, and code review flow.' },
-      { name: 'Jira', detail: 'Sprint-based planning, task tracking, and issue movement through delivery stages.' },
-      { name: 'Postman', detail: 'API validation, request testing, debugging, and contract verification.' },
-      { name: 'VS Code / IDE Workflow', detail: 'Productive day-to-day development, debugging, and refactoring support.' },
+    title: 'Tools & Collaboration',
+    description:
+      'Along with coding, I rely on practical tools for debugging, API testing, source control, and team-based delivery.',
+    skills: [
+      {
+        title: 'Git & GitHub',
+        icon: <GitBranch size={18} />,
+        description:
+          'Version control, branch-based workflows, collaboration, and maintaining project history cleanly.',
+      },
+      {
+        title: 'Postman',
+        icon: <Webhook size={18} />,
+        description:
+          'API testing, payload validation, response checking, and service-level debugging.',
+      },
+      {
+        title: 'Jira / Agile Delivery',
+        icon: <Users size={18} />,
+        description:
+          'Working in sprint-based teams, managing tasks, and contributing to structured delivery cycles.',
+      },
+      {
+        title: 'IntelliJ / VS Code',
+        icon: <Code2 size={18} />,
+        description:
+          'Daily development environments for backend logic, frontend iteration, and troubleshooting.',
+      },
+      {
+        title: 'Documentation & Writeups',
+        icon: <FileJson size={18} />,
+        description:
+          'Translating hands-on learning into notes, breakdowns, and portfolio-friendly technical communication.',
+      },
     ],
   },
-  practices: {
-    title: 'Engineering Practices',
+  {
+    key: 'practices',
+    label: 'Engineering Practices',
     icon: <ShieldCheck size={18} />,
-    intro: 'These are the practical habits that shape how I implement features and fix issues in real systems.',
-    items: [
-      { name: 'Debugging', detail: 'Tracing issues across API calls, rendering flow, environment behavior, and service integrations.' },
-      { name: 'Secure Coding', detail: 'Attention to XSS, secrets, validation, and safer defaults across applications.' },
-      { name: 'Code Quality', detail: 'Readable structure, modular thinking, maintainable components, and clean API boundaries.' },
-      { name: 'Problem Solving', detail: 'Breaking down real issues into reproducible causes and practical fixes.' },
+    title: 'Engineering Practices',
+    description:
+      'I care about how software behaves in real environments — not just whether it runs, but whether it is reliable, secure, and maintainable.',
+    skills: [
+      {
+        title: 'Debugging',
+        icon: <Bug size={18} />,
+        description:
+          'Tracing issues through code, APIs, configs, environments, and connected services.',
+      },
+      {
+        title: 'Testing Mindset',
+        icon: <TestTube2 size={18} />,
+        description:
+          'Thinking in terms of validation, edge cases, confidence, and reducing regressions during delivery.',
+      },
+      {
+        title: 'Secure Coding',
+        icon: <LockKeyhole size={18} />,
+        description:
+          'Awareness of vulnerabilities, safer implementation choices, and defensive engineering practices.',
+      },
+      {
+        title: 'Performance Awareness',
+        icon: <Gauge size={18} />,
+        description:
+          'Looking for cleaner logic, lower noise, better validation paths, and production-grade efficiency.',
+      },
+      {
+        title: 'API & Service Design',
+        icon: <Webhook size={18} />,
+        description:
+          'Designing services that are understandable, scalable, and easier to integrate with.',
+      },
+      {
+        title: 'Collaborative Delivery',
+        icon: <Users size={18} />,
+        description:
+          'Working effectively with QA, DevOps, security, and product-facing teams to improve outcomes.',
+      },
     ],
   },
-};
+];
 
 const Skills = () => {
-  const tabs = useMemo(() => Object.keys(skillGroups), []);
-  const [activeTab, setActiveTab] = useState(tabs[0]);
-  const activeGroup = skillGroups[activeTab];
+  const [activeTab, setActiveTab] = useState('backend');
+
+  const activeCategory = useMemo(
+    () => skillCategories.find((item) => item.key === activeTab) || skillCategories[0],
+    [activeTab]
+  );
 
   return (
     <section className="skills-section section-card" id="skills">
@@ -85,45 +305,64 @@ const Skills = () => {
         <p className="section-kicker">Skills</p>
         <h2 className="skills-title">
           <Brain size={28} className="iconS" />
-          Interactive map of what I work with
+          Interactive Map of What I Work With
         </h2>
         <div className="title-underline"></div>
       </div>
 
-      <div className="skills-tabs">
-        {tabs.map((tab) => (
-          <button
-            key={tab}
-            className={`skill-tab ${activeTab === tab ? 'active' : ''}`}
-            onClick={() => setActiveTab(tab)}
-          >
-            <span className="skill-tab-icon">{skillGroups[tab].icon}</span>
-            {skillGroups[tab].title}
-          </button>
-        ))}
+      <div className="skills-tab-row" role="tablist" aria-label="Skill categories">
+        {skillCategories.map((category) => {
+          const isActive = activeTab === category.key;
+          return (
+            <button
+              key={category.key}
+              type="button"
+              className={`skills-tab ${isActive ? 'active' : ''}`}
+              onClick={() => setActiveTab(category.key)}
+              role="tab"
+              aria-selected={isActive}
+            >
+              <span className="skills-tab-icon">{category.icon}</span>
+              <span>{category.label}</span>
+            </button>
+          );
+        })}
       </div>
 
       <motion.div
-        key={activeTab}
-        className="skills-showcase"
-        initial={{ opacity: 0, y: 18 }}
+        key={activeCategory.key + '-summary'}
+        className="skills-summary-card"
+        initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35 }}
       >
-        <div className="skills-showcase-copy">
-          <h3>{activeGroup.title}</h3>
-          <p>{activeGroup.intro}</p>
+        <div className="skills-summary-title-row">
+          <span className="skills-summary-icon">{activeCategory.icon}</span>
+          <h3>{activeCategory.title}</h3>
         </div>
+        <p>{activeCategory.description}</p>
+      </motion.div>
 
-        <div className="skills-grid">
-          {activeGroup.items.map((skill) => (
-            <article className="skill-detail-card" key={skill.name}>
-              <h4>{skill.name}</h4>
-              <p>{skill.detail}</p>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeCategory.key}
+          className="skills-grid"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -12 }}
+          transition={{ duration: 0.35 }}
+        >
+          {activeCategory.skills.map((skill) => (
+            <article className="skill-card" key={skill.title}>
+              <div className="skill-card-title-row">
+                <span className="skill-card-icon">{skill.icon}</span>
+                <h4>{skill.title}</h4>
+              </div>
+              <p>{skill.description}</p>
             </article>
           ))}
-        </div>
-      </motion.div>
+        </motion.div>
+      </AnimatePresence>
     </section>
   );
 };
