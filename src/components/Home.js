@@ -55,7 +55,7 @@ const socialLinks = [
 ];
 
 const heroStats = [
-  { value: '3+', label: 'Years building production systems', icon: <BriefcaseBusiness size={18} /> },
+  { value: '4', label: 'Years building production systems', icon: <BriefcaseBusiness size={18} /> },
   { value: '5', label: 'Industry certifications', icon: <BadgeCheck size={18} /> },
   { value: 'Java + AWS', label: 'Core engineering focus', icon: <Sparkles size={18} /> },
 ];
