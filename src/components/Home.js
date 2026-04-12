@@ -89,7 +89,7 @@ const socialLinks = [
 
 const heroStats = [
   {
-    value: '3+',
+    value: '4',
     label: 'Years building production systems',
     icon: <BriefcaseBusiness size={18} />,
   },
