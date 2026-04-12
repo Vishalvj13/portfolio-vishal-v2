@@ -6,8 +6,8 @@ import '../styles/NowSection.css';
 const focusCards = [
   {
     icon: <Radar size={20} />,
-    title: 'Currently building depth in frontend product polish',
-    text: 'Working on making React UIs feel more app-like through theme systems, interaction design, and better state-driven UX.',
+    title: 'Using AI to Improve Engineering Productivity',
+    text: 'I’m actively exploring how AI can improve engineering productivity through tools like ChatGPT and Claude — from faster debugging and cleaner code generation to better documentation, idea validation, and development workflow support.',
   },
   {
     icon: <Blocks size={20} />,
@@ -16,8 +16,8 @@ const focusCards = [
   },
   {
     icon: <BookOpenCheck size={20} />,
-    title: 'Learning through building + writing',
-    text: 'I regularly turn hands-on learning into portfolio improvements, writeups, and interview-focused breakdowns.',
+    title: 'Learning Through Building, Writing, and Security Automation',
+    text: 'I’m actively learning through hands-on building, writeups, and real experimentation — especially across security, automation, and cloud governance. I regularly turn that learning into portfolio improvements, practical breakdowns, and stronger engineering workflows.',
   },
 ];
 
@@ -28,7 +28,7 @@ const NowSection = () => {
         <p className="section-kicker">Now</p>
         <h2 className="now-title">
           <Sparkles size={28} className="iconNow" />
-          What I’m actively sharpening right now
+          What I’m Actively Sharpening Right Now
         </h2>
         <div className="title-underline"></div>
       </div>
