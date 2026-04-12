@@ -206,18 +206,6 @@ const Home = ({ onOpenResume, onOpenCommandPalette }) => {
               </a>
             ))}
           </div>
-
-          <div className="hero-stats-grid">
-            {heroStats.map((stat) => (
-              <div key={stat.label} className="hero-stat-card">
-                <div className="hero-stat-icon">{stat.icon}</div>
-                <div>
-                  <h3>{stat.value}</h3>
-                  <p>{stat.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </motion.div>
 
         <motion.div
@@ -236,6 +224,23 @@ const Home = ({ onOpenResume, onOpenCommandPalette }) => {
             </div>
           </div>
         </motion.div>
+
+        <motion.div
+          className="hero-stats-grid"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.28 }}
+        >
+          {heroStats.map((stat) => (
+            <div key={stat.label} className="hero-stat-card">
+              <div className="hero-stat-icon">{stat.icon}</div>
+              <div className="hero-stat-copy">
+                <h3>{stat.value}</h3>
+                <p>{stat.label}</p>
+              </div>
+            </div>
+          ))}
+        </motion.div>
       </div>
 
       <div className="certification-rail">
@@ -245,14 +250,27 @@ const Home = ({ onOpenResume, onOpenCommandPalette }) => {
         </div>
         <div className="certifications">
           {certifications.map((cert) => (
-            <a href={cert.href} target="_blank" rel="noopener noreferrer" key={cert.alt} className="cert-card">
+            <a
+              href={cert.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={cert.alt}
+              className="cert-card"
+            >
               <img src={cert.src} alt={cert.alt} />
             </a>
           ))}
         </div>
       </div>
 
-      <Link to="about" smooth duration={500} offset={-70} className="scroll-down" aria-label="Scroll to about section">
+      <Link
+        to="about"
+        smooth
+        duration={500}
+        offset={-70}
+        className="scroll-down"
+        aria-label="Scroll to about section"
+      >
         <ArrowDownToLine size={20} />
         <span>Explore more</span>
       </Link>
