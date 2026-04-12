@@ -44,7 +44,7 @@ const About = () => {
         >
           <p className="about-text">
             I’m <strong>Vishal Junghare</strong>, a software engineer with{' '}
-            <strong>3+ years of experience</strong> across backend development, cloud security,
+            <strong>4 years of experience</strong> across backend development, cloud security,
             automation, and modern application delivery. My core strength is building scalable
             services with <strong>Java</strong>, <strong>Spring Boot</strong>, and
             <strong> AWS</strong>, while also contributing to frontend experiences using{' '}
