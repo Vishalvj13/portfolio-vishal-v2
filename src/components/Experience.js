@@ -24,6 +24,8 @@ const experienceData = [
       'Handled automation-oriented flows where reducing duplicate checks and noisy API usage had direct operational value.',
       'Contributed to production-quality engineering improvements instead of only isolated feature development.',
     ],
+    impactLine:
+      'Focused on cloud security, automation, governance workflows, and improving production-grade validation and remediation systems.',
     tech: ['AWS', 'CI/CD','Automation', 'Security'],
     icon: <ShieldCheck size={18} />,
   },
@@ -45,6 +47,8 @@ const experienceData = [
       'Handled bug fixing, API-related changes, and production-sensitive improvements rather than only greenfield work.',
       'Gained strong exposure to debugging issues across service, UI impact, and environment layers.',
     ],
+    impactLine:
+      'Focused on backend services, REST API development, debugging, and delivering scalable enterprise solutions for telecom platforms.',
     tech: ['Java', 'Spring', 'Hibernate/JPA','REST APIs', 'MySQL', 'Jenkins', 'Security', 'Enterprise Integration'],
     icon: <Layers3 size={18} />,
   },
@@ -66,6 +70,8 @@ const experienceData = [
       'Learned to work across debugging, validation, and incremental product enhancements in a structured enterprise setup.',
       'This phase shaped how I approach troubleshooting and implementation discipline today.',
     ],
+    impactLine:
+      'Focused on learning enterprise delivery, debugging across environments, and building a strong foundation in backend implementation and release quality.',
     tech: ['Java', 'CRM Systems', 'Testing', 'Agile', 'Debugging'],
     icon: <Cpu size={18} />,
   },
@@ -145,7 +151,7 @@ const Experience = () => {
                     ))}
                     <div className="experience-impact-row">
                       <ArrowUpRight size={16} />
-                      <span>Focused on production quality, debugging depth, and meaningful system improvements.</span>
+                      <span>{item.impactLine}</span>
                     </div>
                   </div>
                 )}
