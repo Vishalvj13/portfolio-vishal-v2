@@ -26,7 +26,7 @@ const experienceData = [
     ],
     impactLine:
       'Focused on cloud security, automation, governance workflows, and improving production-grade validation and remediation systems.',
-    tech: ['AWS', 'CI/CD','Automation', 'Security'],
+    tech: ['AWS', 'Cloud Security', 'CI/CD','Automation', 'Governance', 'Policy Creation'],
     icon: <ShieldCheck size={18} />,
   },
   {
