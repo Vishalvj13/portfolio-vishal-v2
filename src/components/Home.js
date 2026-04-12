@@ -4,7 +4,15 @@ import profileImg1 from '../assets/photo_primary2.png';
 import Navbar from './Navbar';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import { Download, ArrowDownToLine, Sparkles, BadgeCheck, BriefcaseBusiness, FileSearch, Command } from 'lucide-react';
+import {
+  Download,
+  ArrowDownToLine,
+  Sparkles,
+  BadgeCheck,
+  BriefcaseBusiness,
+  FileSearch,
+  Command,
+} from 'lucide-react';
 import awsPractitioner from '../assets/aws-practitioner.png';
 import awsSAA from '../assets/aws-saa.png';
 import awsDVA from '../assets/aws-dva.png';
@@ -47,17 +55,54 @@ const certifications = [
 ];
 
 const socialLinks = [
-  { href: 'https://github.com/Vishalvj13', icon: <FaGithub />, label: 'GitHub' },
-  { href: 'https://linkedin.com/in/vishal-junghare-vj', icon: <FaLinkedin />, label: 'LinkedIn' },
-  { href: 'https://www.instagram.com/vishal_13_?igsh=MWc5eWdpdGFhanBpNw==', icon: <FaInstagram />, label: 'Instagram' },
-  { href: 'https://www.credly.com/users/vishal-junghare', icon: <SiCredly />, label: 'Credly' },
-  { href: 'https://medium.com/@vishal_13_', icon: <SiMedium />, label: 'Medium' },
+  {
+    href: 'https://github.com/Vishalvj13',
+    icon: <FaGithub />,
+    label: 'GitHub',
+    className: 'github-social',
+  },
+  {
+    href: 'https://linkedin.com/in/vishal-junghare-vj',
+    icon: <FaLinkedin />,
+    label: 'LinkedIn',
+    className: 'linkedin-social',
+  },
+  {
+    href: 'https://www.instagram.com/vishal_13_?igsh=MWc5eWdpdGFhanBpNw==',
+    icon: <FaInstagram />,
+    label: 'Instagram',
+    className: 'instagram-social',
+  },
+  {
+    href: 'https://www.credly.com/users/vishal-junghare',
+    icon: <SiCredly />,
+    label: 'Credly',
+    className: 'credly-social',
+  },
+  {
+    href: 'https://medium.com/@vishal_13_',
+    icon: <SiMedium />,
+    label: 'Medium',
+    className: 'medium-social',
+  },
 ];
 
 const heroStats = [
-  { value: '4', label: 'Years building production systems', icon: <BriefcaseBusiness size={18} /> },
-  { value: '5', label: 'Industry certifications', icon: <BadgeCheck size={18} /> },
-  { value: 'Java + AWS', label: 'Core engineering focus', icon: <Sparkles size={18} /> },
+  {
+    value: '3+',
+    label: 'Years building production systems',
+    icon: <BriefcaseBusiness size={18} />,
+  },
+  {
+    value: '5',
+    label: 'Industry certifications',
+    icon: <BadgeCheck size={18} />,
+  },
+  {
+    value: 'Java + AWS',
+    label: 'Core engineering focus',
+    icon: <Sparkles size={18} />,
+  },
 ];
 
 const Home = ({ onOpenResume, onOpenCommandPalette }) => {
@@ -87,12 +132,15 @@ const Home = ({ onOpenResume, onOpenCommandPalette }) => {
           <h1 className="hero-text">
             Vishal Junghare
             <span className="hero-role">
-              Software Engineer building <span className="gradient-text">scalable backend systems</span> and polished product experiences.
+              Software Engineer building{' '}
+              <span className="gradient-text">scalable backend systems</span> and polished product
+              experiences.
             </span>
           </h1>
 
           <p className="hero-subtext">
-            I work across <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>AWS</strong>, and <strong>React</strong> to build secure, reliable, and user-focused applications.
+            I work across <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>AWS</strong>
+            , and <strong>React</strong> to build secure, reliable, and user-focused applications.
             <span className="typewriter-line">
               <Typewriter
                 words={[
@@ -146,7 +194,14 @@ const Home = ({ onOpenResume, onOpenCommandPalette }) => {
 
           <div className="social-strip">
             {socialLinks.map((item) => (
-              <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label={item.label}>
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`social-icon ${item.className}`}
+                aria-label={item.label}
+              >
                 {item.icon}
               </a>
             ))}
@@ -175,10 +230,6 @@ const Home = ({ onOpenResume, onOpenCommandPalette }) => {
             <div className="profile-orbit profile-orbit-one"></div>
             <div className="profile-orbit profile-orbit-two"></div>
             <img src={profileImg1} alt="Vishal Junghare" className="profile-img" />
-            <div className="profile-glass-card top-card">
-              <span>Now focused on</span>
-              <strong>Cloud Security · Automation</strong>
-            </div>
             <div className="profile-glass-card bottom-card">
               <span>Open to</span>
               <strong>Impactful engineering roles</strong>
