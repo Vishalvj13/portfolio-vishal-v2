@@ -7,6 +7,7 @@ import hmsImg from '../assets/hms1.jpg';
 import sbmImg from '../assets/sbm1.jpg';
 import awsdeployImg from '../assets/awsdeploy.png';
 import websiteImg from '../assets/websiteImg.png';
+import orderProcessingImg from '../assets/orderProcessingImg.png';
 
 const projects = [
   {
@@ -24,6 +25,25 @@ const projects = [
     role: 'Built both backend and frontend flows with an emphasis on clean structure and realistic module separation.',
     challenges: ['Keeping the flow modular instead of building it as one flat demo', 'Making the UI and backend responsibilities clearly separated'],
     impact: 'Demonstrates full-stack ownership and how I think about system structure beyond just screens.',
+  },
+  {
+   title: 'Order Processing Platform',
+   category: 'Backend / Distributed Systems',
+   tech: ['Spring Boot', 'Microservices', 'Kafka', 'PostgreSQL', 'Docker'],
+   description: 'A backend-driven order lifecycle platform designed to manage order creation, validation, and processing through scalable service-to-service communication.',
+   highlights: [
+     'Structured with clear service boundaries to simulate real-world order lifecycle handling.',
+     'Focused on asynchronous processing, modular backend design, and maintainable business logic.',
+     'Designed to showcase practical order orchestration and reliable inter-service communication beyond basic CRUD APIs.',
+  ],
+   image: orderProcessingImg,
+   github: 'https://github.com/Vishalvj13/order-processing-platform',
+   role: 'Built backend services focused on order flow orchestration, service interaction, and scalable processing patterns.',
+   challenges: [
+     'Designing service communication without tightly coupling the business flow',
+     'Keeping order processing extensible while maintaining clean module separation',
+   ],
+   impact: 'Demonstrates backend architecture thinking around distributed systems, event-driven flow, and production-style service decomposition.',
   },
   {
     title: 'Quiz Management Microservices',
