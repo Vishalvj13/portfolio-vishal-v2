@@ -8,6 +8,7 @@ import sbmImg from '../assets/sbm1.jpg';
 import awsdeployImg from '../assets/awsdeploy.png';
 import websiteImg from '../assets/websiteImg.png';
 import orderProcessingImg from '../assets/orderProcessingImg.png';
+import microservicesCommerceImg from '../assets/microservicesCommerceImg.png';
 
 const projects = [
   {
@@ -25,6 +26,37 @@ const projects = [
     role: 'Built both backend and frontend flows with an emphasis on clean structure and realistic module separation.',
     challenges: ['Keeping the flow modular instead of building it as one flat demo', 'Making the UI and backend responsibilities clearly separated'],
     impact: 'Demonstrates full-stack ownership and how I think about system structure beyond just screens.',
+  },
+  {
+    title: 'Microservices Commerce Platform',
+    category: 'Backend / Microservices Architecture',
+    tech: [
+      'Java 17',
+      'Spring Boot',
+      'Spring Cloud',
+      'Kafka',
+      'PostgreSQL',
+      'Docker',
+      'Maven'
+    ],
+    description:
+      'A backend-focused microservices platform built to explore distributed system architecture, scalable service design, asynchronous communication, and cloud-native development practices using independently deployable services.',
+
+    highlights: [
+      'Designed around independently deployable services including Product, Order, User, Notification, and API Gateway components.',
+      'Focused on event-driven workflows, service-to-service communication, and scalable backend architecture patterns inspired by real-world systems.',
+      'Practiced distributed system concepts such as API gateway routing, database-per-service architecture, and asynchronous messaging with Kafka.',
+    ],
+    image: microservicesCommerceImg,
+    github: 'https://github.com/Vishalvj13/microservices-commerce-platform',
+    role:
+      'Built backend microservices emphasizing modular service boundaries, event-driven communication, distributed workflows, and scalable system design.',
+    challenges: [
+      'Designing reliable inter-service communication while maintaining loose coupling between services',
+      'Managing asynchronous workflows and event consistency across independently deployable services',
+    ],
+    impact:
+      'Demonstrates practical understanding of microservices architecture, distributed backend systems, event-driven processing, and cloud-native application development.',
   },
   {
    title: 'Order Processing Platform',
