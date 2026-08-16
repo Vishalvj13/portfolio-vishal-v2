@@ -94,7 +94,7 @@ const heroStats = [
     icon: <BriefcaseBusiness size={18} />,
   },
   {
-    value: '5',
+    value: '5+',
     label: 'Industry certifications',
     icon: <BadgeCheck size={18} />,
   },
