@@ -146,7 +146,7 @@ const Home = ({ onOpenResume, onOpenCommandPalette }) => {
                 words={[
                   'Cloud Security Engineer',
                   'Backend Developer',
-                  'AWS-Certified Builder',
+                  'AWS-Certified',
                   'Modern Web Explorer',
                 ]}
                 loop
